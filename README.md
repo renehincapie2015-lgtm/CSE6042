@@ -376,3 +376,6 @@ Dentro del aplicativo modificamos el componente Chat para comunicarlo con el end
 
 Procedemos a probar:
 ![Evidencia23](https://github.com/user-attachments/assets/80eb72a2-ec76-49c0-937a-db9f6487de52)
+![Evidencia24](https://github.com/user-attachments/assets/0aad168f-bcea-4632-ae83-8d47b7f09b15)
+
+Se analizaron los procesos FastMCP que están corriendo y se detecta que no se logra conectar con la base MySQL local. Esto se debe a que se necesita abrir un puerto en el router del wifi de mi casa, pero no logro entrar a su página de gestión.
