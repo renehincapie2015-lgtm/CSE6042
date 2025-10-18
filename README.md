@@ -337,3 +337,42 @@ Por último, las evidencias de los modelos, vistas, autenticación y seguridad e
 ![FastAPI08](https://github.com/user-attachments/assets/19423244-561c-41a4-acef-0f0c78ea4933)
 ![FastAPI09](https://github.com/user-attachments/assets/90969de8-c6cd-4313-aeed-0645d8bd2b75)
 ![FastAPI10](https://github.com/user-attachments/assets/070cfc1b-44db-45c4-ab09-a31dffdcfdb8)
+
+### Semana 7 Creación e Integración de Chatbot
+Vamos a aplicar el concepto de intermediario MCP entre nuestro aplicativo y un chatbot.
+
+Primero creamos un archivo Python que funciona como Servidor MCP que publicará unos endpoints para consultar los Productos:
+![Evidencia01](https://github.com/user-attachments/assets/b81485bc-916f-4400-8844-381a99616d62)
+![Evidencia02](https://github.com/user-attachments/assets/9e8d655c-bc64-441f-b8c0-a69c1175d2ce)
+
+Probamos que dichos endpoints están activos:
+![Evidencia04](https://github.com/user-attachments/assets/c10226f4-aeae-488c-bccc-2e253f7e052d)
+![Evidencia05](https://github.com/user-attachments/assets/4323336b-f013-46b1-84f3-743b65c82334)
+
+Creamos una cuenta en la página FastMCP, la asociamos con Github, de modo que cada commit nos actualice el servidor desplegado. Parametrizamos su conexión a la base de datos MySQL local, probamos los tools desplegados, y conectamos un chat para comprobar las respuestas:
+![Evidencia06](https://github.com/user-attachments/assets/a42e817a-734d-4b1a-8a67-d811ea120f7f)
+![Evidencia07](https://github.com/user-attachments/assets/a40f275a-e75d-44eb-984b-0003925f46ee)
+![Evidencia08](https://github.com/user-attachments/assets/81b593f4-3bed-4bcb-ad55-34ac0120fa51)
+![Evidencia09](https://github.com/user-attachments/assets/ab945d00-90d6-4365-b8e7-e7c654b22043)
+![Evidencia10](https://github.com/user-attachments/assets/82181d55-b227-436c-adb1-16eead524686)
+![Evidencia11](https://github.com/user-attachments/assets/8649f87e-8cdd-4a29-9b74-871cd6610012)
+![Evidencia13](https://github.com/user-attachments/assets/3b7c7ec3-1829-490f-a352-2562852f030d)
+![Evidencia14](https://github.com/user-attachments/assets/47a6c3fd-5fd8-4192-8b91-df6a983d012c)
+![Evidencia15](https://github.com/user-attachments/assets/5a294bef-53e5-4100-ac69-cb39e418c560)
+![Evidencia16](https://github.com/user-attachments/assets/368d806b-8b77-4f54-a799-63979487dd37)
+![Evidencia17](https://github.com/user-attachments/assets/3e51616d-200b-41e7-8059-ecf870deae6e)
+
+Probamos que desde el Postman local sí podemos acceder al servidor en FastMCP
+![Evidencia12](https://github.com/user-attachments/assets/53d29efc-aa7d-42d4-b737-994891d9c360)
+
+Con base en esto creamos un archivo Python que nos dará un endpoint para conectar la aplicación React con el servidor en FastMCP, y probamos con Postman que estamos recibiendo respuesta:
+![Evidencia18](https://github.com/user-attachments/assets/a2ef3033-e62f-4d64-b647-504ce5d7b252)
+![Evidencia19](https://github.com/user-attachments/assets/7c712019-a827-409c-a375-60ea24f2f80b)
+
+Dentro del aplicativo modificamos el componente Chat para comunicarlo con el endpoint de Python. Luego lo agregamos al AppRouter.js para indicar su acceso, y agregarle la validación de autenticación en el sistema. En la pantalla que nos da información de usuario, corregimos el enlace que redirige al chat:
+![Evidencia20](https://github.com/user-attachments/assets/37502303-0818-4924-a1cb-6f1bc4da21f3)
+![Evidencia21](https://github.com/user-attachments/assets/47377da4-cf3c-4361-a33f-6f8cf26f681f)
+![Evidencia22](https://github.com/user-attachments/assets/ac06bcb1-e3d6-42a9-a78f-51c74ee7804e)
+
+Procedemos a probar:
+![Evidencia23](https://github.com/user-attachments/assets/80eb72a2-ec76-49c0-937a-db9f6487de52)
